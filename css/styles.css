@@ -45,6 +45,14 @@ body{
   box-shadow: var(--shadow);
 }
 
+.hero-card img{
+  max-width: 320px;   /* ajustá: 280 / 300 / 320 */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .mini-info{
   display: grid;
   gap: .4rem;
