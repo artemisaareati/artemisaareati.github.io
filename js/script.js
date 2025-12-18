@@ -22,7 +22,7 @@
         <div style="text-align:left">
           <p><strong>Instituto Artemisa</strong> - Formación Técnico-Profesional</p>
           <p>Consultá por fechas, modalidad y requisitos.</p>
-          <p class="mb-0"><strong>Contacto:</strong> info@artemisa.edu.uy | 099081978</p>
+          <p class="mb-0"><strong>Contacto:</strong> info@artemisa.edu.uy | 092099230</p>
         </div>
       `,
       confirmButtonText: "Entendido"
