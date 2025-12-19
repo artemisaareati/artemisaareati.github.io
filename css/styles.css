@@ -4,8 +4,8 @@
   --soft2:#eef2ff;
   --ink:#1f2937;
   --muted:#6b7280;
-  --primary:#2f6d4a;   /* verde suave */
-  --accent:#d39b6a;    /* tono cálido similar al logo */
+  --primary:#2f6d4a;
+  --accent:#d39b6a;
   --card:#ffffff;
   --shadow: 0 10px 30px rgba(0,0,0,.08);
   --radius: 1.25rem;
@@ -46,7 +46,7 @@ body{
 }
 
 .hero-card img{
-  max-width: 320px;   /* ajustá: 280 / 300 / 320 */
+  max-width: 320px;
   width: 100%;
   height: auto;
   display: block;
@@ -145,7 +145,11 @@ body{
   border-radius: 12px;
 }
 
-/* Botón flotante WhatsApp */
+/* ---------------------------
+   BOTONES FLOTANTES
+---------------------------- */
+
+/* WhatsApp (derecha) */
 .wa-float{
   position: fixed;
   right: 18px;
@@ -160,7 +164,7 @@ body{
   text-decoration: none;
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
   z-index: 999;
-  transition: transform .15s ease;
+  transition: transform .15s ease, opacity .15s ease;
 }
 .wa-float:hover{
   transform: translateY(-2px);
@@ -170,7 +174,66 @@ body{
   font-size: 1.9rem;
 }
 
-/* Animación al scrollear */
+/* Control Zeta (izquierda) */
+.cz-float{
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  z-index: 999;
+  text-decoration: none;
+  transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease;
+}
+.cz-float:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.28);
+}
+.cz-float img{
+  width: 42px;
+  height: auto;
+  display: block;
+}
+
+/* Mobile-first: un poco más chicos en pantallas pequeñas */
+@media (max-width: 575.98px){
+  .wa-float, .cz-float{
+    width: 50px;
+    height: 50px;
+    right: 14px;
+    left: 14px;
+    bottom: 14px;
+  }
+  .wa-float i{ font-size: 1.6rem; }
+  .cz-float img{ width: 36px; }
+}
+
+/* Ocultar/mostrar en scroll */
+.floaty.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(90px);
+}
+
+/* Accesibilidad: menos movimiento */
+@media (prefers-reduced-motion: reduce){
+  .wa-float, .cz-float, .course-card{
+    transition: none !important;
+  }
+  .animate__animated{
+    animation: none !important;
+  }
+}
+
+/* ---------------------------
+   ANIMACIÓN AL SCROLL
+---------------------------- */
+
 .animate-on-scroll{
   opacity: 0;
   transform: translateY(10px);

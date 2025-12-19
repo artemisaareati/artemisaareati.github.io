@@ -12,6 +12,10 @@
 
   targets.forEach(t => io.observe(t));
 
+  // Bootstrap tooltips (WhatsApp + ControlZeta)
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el));
+
   // SweetAlert - Info cursos
   const btnInfo = document.getElementById("btnVerInfoCursos");
   btnInfo?.addEventListener("click", () => {
@@ -79,9 +83,29 @@
     abrirWhatsapp("Hola, me gustaría recibir información sobre los cursos del Instituto Artemisa.");
   });
 
+  // Ocultar botones flotantes al bajar, mostrar al subir
+  const floaties = document.querySelectorAll(".floaty");
+  let lastY = window.scrollY;
+
+  const onScroll = () => {
+    const y = window.scrollY;
+    const goingDown = y > lastY + 6;  // umbral para evitar “parpadeo”
+    const goingUp   = y < lastY - 6;
+
+    if (goingDown) floaties.forEach(el => el.classList.add("is-hidden"));
+    if (goingUp)   floaties.forEach(el => el.classList.remove("is-hidden"));
+
+    // Si estás arriba del todo, que se vean
+    if (y < 80) floaties.forEach(el => el.classList.remove("is-hidden"));
+
+    lastY = y;
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+
   // --- Helpers ---
   function abrirWhatsapp(texto) {
-    // IMPORTANTE: formato internacional para Uruguay: 598 + número (sin 0)
+    // formato internacional para Uruguay: 598 + número (sin 0)
     const phone = "59892099230";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank", "noopener,noreferrer");
