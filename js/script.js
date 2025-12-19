@@ -150,4 +150,16 @@
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   }
+  
+  // Botón "Volver al inicio": mostrar/ocultar según scroll
+	const btnBackToTop = document.getElementById("btnBackToTop");
+	if (btnBackToTop) {
+	  const toggleBackToTop = () => {
+		if (window.scrollY > 300) btnBackToTop.classList.add("visible");
+		else btnBackToTop.classList.remove("visible");
+	  };
+
+	  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+	  toggleBackToTop(); // estado inicial
+	}
 })();
