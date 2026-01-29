@@ -52,6 +52,12 @@
     abrirWhatsapp("Hola, me gustaría recibir información sobre los cursos del Instituto Artemisa.");
   });
 
+  // CTA Inscripción: WhatsApp con mensaje prearmado
+  const btnInscribirme = document.getElementById("btnInscribirme");
+  btnInscribirme?.addEventListener("click", () => {
+    abrirWhatsapp("Hola, quiero iniciar la inscripción. ¿Me indican requisitos, cupos y fechas de inicio?");
+  });
+
   // FORMULARIO: Envío real con Formspree vía AJAX + SweetAlert solo si OK
   const form = document.getElementById("contactForm");
   const btnEnviar = document.getElementById("btnEnviarContacto");
@@ -69,7 +75,6 @@
     }
 
     // reCAPTCHA v2: verificar que esté resuelto
-    // (Google crea el token en el campo g-recaptcha-response)
     const recaptchaToken = (window.grecaptcha && typeof window.grecaptcha.getResponse === "function")
       ? window.grecaptcha.getResponse()
       : "";
@@ -90,8 +95,7 @@
     }
 
     try {
-      // Enviar a Formspree como FormData
-      // Con Accept: application/json obtenés respuesta JSON (ideal para AJAX) :contentReference[oaicite:5]{index=5}
+      // Enviar a Formspree como FormData (Accept: application/json -> respuesta JSON)
       const formData = new FormData(form);
 
       const resp = await fetch(form.action, {
@@ -150,16 +154,16 @@
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   }
-  
-  // Botón "Volver al inicio": mostrar/ocultar según scroll
-	const btnBackToTop = document.getElementById("btnBackToTop");
-	if (btnBackToTop) {
-	  const toggleBackToTop = () => {
-		if (window.scrollY > 300) btnBackToTop.classList.add("visible");
-		else btnBackToTop.classList.remove("visible");
-	  };
 
-	  window.addEventListener("scroll", toggleBackToTop, { passive: true });
-	  toggleBackToTop(); // estado inicial
-	}
+  // Botón "Volver al inicio": mostrar/ocultar según scroll
+  const btnBackToTop = document.getElementById("btnBackToTop");
+  if (btnBackToTop) {
+    const toggleBackToTop = () => {
+      if (window.scrollY > 300) btnBackToTop.classList.add("visible");
+      else btnBackToTop.classList.remove("visible");
+    };
+
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+    toggleBackToTop(); // estado inicial
+  }
 })();

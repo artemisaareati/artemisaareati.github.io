@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Google reCAPTCHA v2 -->
-  <!-- Reemplazá TU_SITE_KEY por tu site key real -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body id="inicio">
@@ -43,6 +42,8 @@
           <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#inscripciones">Inscripciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#metodologia">Metodología</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -66,6 +67,9 @@
             <a class="btn btn-outline-secondary btn-lg" href="#contacto">
               <i class="fa-solid fa-envelope me-2"></i>Contactar
             </a>
+            <a class="btn btn-success btn-lg" href="#inscripciones">
+              <i class="fa-solid fa-clipboard-check me-2"></i>Inscribirme
+            </a>
           </div>
 
           <div class="mini-info mt-4">
@@ -86,6 +90,7 @@
   </header>
 
   <!-- NOSOTROS -->
+  <section id="nosotrosiiv" class="section"></section>
   <section id="nosotros" class="section">
     <div class="container">
       <div class="row g-4 align-items-center">
@@ -181,7 +186,209 @@
     </div>
   </section>
 
-   <!-- CONTACTO -->
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Beneficios institucionales</h2>
+      <p class="text-muted animate-on-scroll">Formación pensada para que avances con confianza y acompañamiento.</p>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card animate-on-scroll">
+            <i class="fa-solid fa-user-shield"></i>
+            <h6 class="mt-3 fw-bold">Acompañamiento</h6>
+            <p class="text-muted mb-0">Seguimiento cercano durante la formación.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card animate-on-scroll">
+            <i class="fa-solid fa-hands-asl-interpreting"></i>
+            <h6 class="mt-3 fw-bold">Enfoque práctico</h6>
+            <p class="text-muted mb-0">Aprendizaje aplicado a situaciones reales.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card animate-on-scroll">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <h6 class="mt-3 fw-bold">Docentes con experiencia</h6>
+            <p class="text-muted mb-0">Equipo docente con recorrido en el área.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card animate-on-scroll">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6 class="mt-3 fw-bold">Ubicación céntrica</h6>
+            <p class="text-muted mb-0">18 de Julio 74, Tacuarembó.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIPCIONES -->
+  <section id="inscripciones" class="section section-alt">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-2">
+        <div>
+          <h2 class="section-title animate-on-scroll">Inscripciones</h2>
+          <p class="text-muted animate-on-scroll mb-0">Requisitos y pasos para iniciar tu formación.</p>
+        </div>
+
+        <button id="btnInscribirme" class="btn btn-success animate-on-scroll">
+          <i class="fa-brands fa-whatsapp me-2"></i>Iniciar inscripción
+        </button>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-6">
+          <div class="info-panel animate-on-scroll">
+            <h6 class="fw-bold mb-2">Requisitos (sugerido)</h6>
+            <ul class="mb-0 text-muted">
+              <li>Cédula de identidad</li>
+              <li>Escolaridad / constancia (según curso)</li>
+              <li>Formulario de inscripción</li>
+              <li>Pago de matrícula (si aplica)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="info-panel animate-on-scroll">
+            <h6 class="fw-bold mb-2">Paso a paso</h6>
+            <ol class="mb-0 text-muted">
+              <li>Elegí el curso</li>
+              <li>Escribinos por WhatsApp</li>
+              <li>Enviá documentación</li>
+              <li>Confirmación de cupo y fecha de inicio</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-band animate-on-scroll mt-4">
+        <div>
+          <div class="fw-bold">¿Querés que te asesoremos?</div>
+          <div class="text-muted small">Te guiamos según tu perfil y disponibilidad.</div>
+        </div>
+        <a class="btn btn-primary" href="#contacto">
+          <i class="fa-solid fa-envelope me-2"></i>Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section id="metodologia" class="section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Prácticas y metodología</h2>
+      <p class="text-muted animate-on-scroll">
+        Cómo enseñamos, cómo se evalúa y cómo se desarrollan las prácticas.
+      </p>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-4">
+          <div class="method-card animate-on-scroll">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h6 class="mt-3 fw-bold">Clases claras</h6>
+            <p class="text-muted mb-0">Contenido organizado y progresivo, con apoyo docente.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="method-card animate-on-scroll">
+            <i class="fa-solid fa-stethoscope"></i>
+            <h6 class="mt-3 fw-bold">Prácticas</h6>
+            <p class="text-muted mb-0">Aplicación guiada de técnicas y procedimientos.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="method-card animate-on-scroll">
+            <i class="fa-solid fa-square-check"></i>
+            <h6 class="mt-3 fw-bold">Evaluación</h6>
+            <p class="text-muted mb-0">Instancias teóricas y prácticas con retroalimentación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Testimonios</h2>
+      <p class="text-muted animate-on-scroll">Opiniones de estudiantes (podés reemplazar por reales).</p>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-4">
+          <div class="testimonial-card animate-on-scroll">
+            <p class="mb-2">“Me sentí acompañada en todo el proceso. Clases claras y prácticas útiles.”</p>
+            <div class="text-muted small">— Estudiante</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-card animate-on-scroll">
+            <p class="mb-2">“El enfoque práctico me ayudó a ganar confianza para el trabajo.”</p>
+            <div class="text-muted small">— Estudiante</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-card animate-on-scroll">
+            <p class="mb-2">“Docentes atentos y contenido actualizado. Lo recomiendo.”</p>
+            <div class="text-muted small">— Estudiante</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Preguntas frecuentes</h2>
+
+      <div class="accordion mt-3 animate-on-scroll" id="faqAcc">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+              ¿Cómo me inscribo?
+            </button>
+          </h2>
+          <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-muted">
+              Podés iniciar por WhatsApp o por el formulario de contacto. Te pedimos documentación y confirmamos cupo/fecha.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+              ¿Los cursos tienen prácticas?
+            </button>
+          </h2>
+          <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-muted">
+              Sí, la formación está orientada a práctica y procedimientos (según el curso).
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">
+              ¿Dónde están ubicados?
+            </button>
+          </h2>
+          <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-muted">
+              18 de Julio 74, Tacuarembó, Uruguay.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
   <section id="contacto" class="section">
     <div class="container">
       <h2 class="section-title animate-on-scroll">Contacto</h2>
@@ -221,8 +428,7 @@
             <h6 class="fw-bold">Formulario</h6>
 
             <!-- FORM: Formspree + AJAX (se maneja en script.js) -->
-            <!-- Reemplazá XXXXYYYY por tu ID real de Formspree -->			
-			<form
+            <form
               id="contactForm"
               class="mt-3"
               action="https://formspree.io/f/maqwyael"
@@ -249,7 +455,6 @@
               <input type="hidden" name="_template" value="table">
 
               <!-- reCAPTCHA v2 widget -->
-              <!-- Reemplazá TU_SITE_KEY por tu site key real -->
               <div class="mb-3">
                 <div class="g-recaptcha" data-sitekey="6Lc9LzAsAAAAAIdVXkcabU3YXVkn7QNtPdwCrSPf"></div>
                 <div class="form-text text-muted">* Verificación anti-spam requerida.</div>
@@ -295,29 +500,38 @@
             <div class="text-muted small">Formación Técnico-Profesional</div>
           </div>
         </div>
-		<div class="text-muted small">© <span id="year"></span> - Tacuarembó, Uruguay
-		  (<a 
-			  href="https://www.controlzeta.com.uy"
-			  target="_blank"
-			  rel="noopener noreferrer"
-			  class="footer-link">
-			  by CTRLZ
-		  </a>)
-		</div>
-	  </div>
-	</div>
+        <div class="text-muted small">
+          © <span id="year"></span> - Tacuarembó, Uruguay
+          (<a
+              href="https://www.controlzeta.com.uy"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link">by CTRLZ</a>)
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <!-- BOTÓN FLOTANTE WHATSAPP (derecha) -->
   <a id="btnWhatsapp" class="wa-float" href="#" aria-label="Chat por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-  
-  <!-- BOTÓN FLOTANTE: VOLVER ARRIBA -->
-	<a id="btnBackToTop" href="#inicio" class="btn btn-light btn-sm shadow-sm back-to-top" aria-label="Volver al inicio">
-	  <i class="fa-solid fa-arrow-up me-2"></i>Volver al inicio
-	</a>
 
+  <!-- BOTÓN FLOTANTE CTRLZ (izquierda) -->
+  <a
+    id="btnCtrlz"
+    class="cz-float"
+    href="https://www.controlzeta.com.uy"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Ir a Control Zeta">
+    <img src="img/LOGO-CTRLZ-WWW-TRANSP.png" alt="CTRLZ">
+  </a>
+
+  <!-- BOTÓN FLOTANTE: VOLVER ARRIBA -->
+  <a id="btnBackToTop" href="#inicio" class="btn btn-light btn-sm shadow-sm back-to-top" aria-label="Volver al inicio">
+    <i class="fa-solid fa-arrow-up me-2"></i>Volver al inicio
+  </a>
 
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

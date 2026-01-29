@@ -144,6 +144,47 @@ body{
   object-fit: cover;
   border-radius: 12px;
 }
+.footer-link{
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+}
+.footer-link:hover{
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* ---------------------------
+   BLOQUES NUEVOS (Opción A)
+---------------------------- */
+.feature-card, .method-card, .testimonial-card, .info-panel{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.feature-card i, .method-card i{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(47, 109, 74, .10);
+  color: rgba(47, 109, 74, .95);
+  font-size: 1.15rem;
+}
+
+.cta-band{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(47, 109, 74, .08);
+  border: 1px solid rgba(47, 109, 74, .15);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
 
 /* ---------------------------
    BOTONES FLOTANTES
@@ -202,22 +243,20 @@ body{
 
 /* Mobile-first: un poco más chicos en pantallas pequeñas */
 @media (max-width: 575.98px){
-  .wa-float, .cz-float{
+  .wa-float{
     width: 50px;
     height: 50px;
     right: 14px;
+    bottom: 14px;
+  }
+  .cz-float{
+    width: 50px;
+    height: 50px;
     left: 14px;
     bottom: 14px;
   }
   .wa-float i{ font-size: 1.6rem; }
   .cz-float img{ width: 36px; }
-}
-
-/* Ocultar/mostrar en scroll */
-.floaty.is-hidden{
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(90px);
 }
 
 /* Accesibilidad: menos movimiento */
